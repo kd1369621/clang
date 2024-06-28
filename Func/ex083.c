@@ -1,0 +1,26 @@
+#include <stdio.h>
+int strcnt(char* p);
+main()
+{
+	char buf[256];
+	int mojisu;
+	printf("•¶š—ñH : ");
+	gets(buf);
+	mojisu = strcnt(buf);
+	printf("“ü—Í‚³‚ê‚½•¶š—ñ‚Ì•¶š”‚Í%d•¶š‚Å‚·B\n", mojisu);
+}
+
+int strcnt(char* p)
+{
+	int cnt;
+	for (cnt = 0; *p != '\0'; cnt++, p++);
+	/* while‚ÅŠeê‡
+	cnt = 0;
+	while (*p != '\o')
+	{
+		cnt++;
+		p++;
+	}
+	*/
+	return(cnt);
+}
